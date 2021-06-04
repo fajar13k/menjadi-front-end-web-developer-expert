@@ -1,0 +1,428 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    color: #424242;
+}
+
+/* Skip to content */
+
+.skip-link {
+    background-color: #F9C22E;
+    color: #041825;
+    font-size: 1.25rem;
+    font-weight: 700;
+    left: 0;
+    padding: 8px;
+    position: absolute;
+    top: -80px;
+    z-index: 100;
+ }
+
+ .skip-link:focus {
+    top: 0;
+ }
+
+/* Nav */
+
+nav {
+    background: #041825;
+    padding: 1rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #44CE87;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    flex: 1;
+    font-weight: 500;
+}
+
+.logo a {
+    color: #44CE87;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.logo a, .toggle a {
+    font-size: 1.75rem;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li {
+    font-size: 1.25rem;
+    padding: 1rem 0.75rem;
+    white-space: nowrap;
+}
+
+.menu li a {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.item {
+    display: none;
+    order: 3;
+    text-align: center;
+    width: 100%;
+}
+
+.item.active {
+    display: block;
+}
+
+.toggle {
+    order: 1;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 450px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/heros/hero-image.jpg');
+    background-position: center;
+    background-color: green;
+    background-size: cover;
+}
+
+.hero__inner {
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.hero__title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.hero__tagline {
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    line-height: 1.5em;
+}
+
+.highlight {
+    border-bottom: 4px solid #44CE87;
+    font-weight:700;
+}
+
+/* Button Eksplor */
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 1em 1.5em;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.button__explore {
+    background-color: #F9C22E;
+    color: #020C12;
+    margin-top: 2rem;
+}
+
+/* Main */
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 2rem;
+}
+
+/* Cerita kami */
+
+.our__story {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.our__story__tagline {
+    color: #EF2D56;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.our__story__headline {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.our__story__description {
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 2rem;
+    margin-top: 1rem;
+}
+
+/* Posts */
+
+.posts {
+    display: grid;
+    grid-row-gap: 16px;
+    margin: 32px auto auto;
+    text-align: left;
+}
+
+/* Post item */
+
+.post-item {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    width: 100%;
+}
+
+.post-item__content {
+    padding: 1rem;
+}
+
+.post-item__thumbnail {
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+}
+
+.post-item__rating {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #020C12;
+}
+
+.post-item__rating__score {
+    color: #33c178;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.post-item__title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    transition: 0.3s opacity;
+}
+
+.post-item__title:hover {
+    opacity: 0.5;
+}
+
+.post-item__title a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.post-item__description {
+    font-size: 0.75rem;
+    line-height: 1.5em;
+}
+
+/* Rules untuk card, supaya tidak loop ke bawah */
+
+#card__restoran {
+    display: contents;
+}
+
+/* Card Overlay */
+
+.box {
+    display: inline-block;
+    position: relative;
+}
+
+.box .post-item__overlay {
+    background: rgba(249, 194, 46, 1);
+    color: #020C12;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    left: 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    width: 35%;
+    z-index: 10;
+}
+
+/* Footer */
+
+footer {
+    background-color: #041825;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+footer .menu li {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+footer .menu p {
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Smaller screen */
+
+@media screen and (min-width: 641px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .item {
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .item {
+        order: 1;
+    }
+
+    .menu li {
+        padding: 1rem 0.75rem;
+    }
+
+    .post-item__content {
+        padding: 1rem;
+    }
+
+    .post-item__title {
+        font-size: 1.5rem;
+    }
+
+    .post-item__description {
+        font-size: 1rem;
+    }
+
+    .post-item__thumbnail {
+        height: 300px;
+    }
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+    nav {
+        padding: 1rem 0;
+    }
+
+    .container {
+        max-width: 720px;
+    }
+
+    .hero__inner {
+        max-width: 740px;
+    }
+
+    .posts {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    .content {
+        padding: 4rem 0;
+    }
+}
+
+/* Larger screen */
+
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .hero__inner {
+        max-width: 900px;
+    }
+
+    .hero__tagline {
+        margin-top: 0.5rem;
+        font-size: 1.25rem;
+    }
+
+    .posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
