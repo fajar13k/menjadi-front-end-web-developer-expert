@@ -1,3 +1,5 @@
+import RestaurantSource from '../../data/restaurant-source';
+
 const NowServing = {
   async render() {
     return `
@@ -6,7 +8,8 @@ const NowServing = {
   },
 
   async afterRender() {
-    // Fungsi akan dipanggil setelah render()
+    const restaurant = await RestaurantSource.nowServingRestaurant();
+    console.log(restaurant.restaurants);
   },
 };
 
