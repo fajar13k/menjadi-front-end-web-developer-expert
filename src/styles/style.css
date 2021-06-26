@@ -5,7 +5,6 @@
 
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,7 +17,7 @@ body {
 
 .app-bar {
   padding: 8px 16px;
-  background-color: white;
+  background-color: #041825;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 10px;
@@ -34,9 +33,10 @@ body {
 }
 
 .app-bar .app-bar__menu button {
-  background-color: transparent;
   border: none;
   font-size: 18px;
+  background-color: transparent;
+  color: white;
   padding: 8px;
   cursor: pointer;
 }
@@ -47,7 +47,7 @@ body {
 }
 
 .app-bar .app-bar__brand h1 {
-  color: #db0000;
+  color: #44CE87;
   text-transform: uppercase;
   font-size: 22px;
   user-select: none;
@@ -60,7 +60,6 @@ body {
   width: 150px;
   transition: all 0.3s;
   padding: 8px;
-  background-color: white;
   overflow: hidden;
 }
 
@@ -71,15 +70,57 @@ body {
 .app-bar .app-bar__navigation ul li a {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  background-color: #041825;
+  color: white;
   padding: 8px;
-  margin-bottom: 5px;
   width: 100%;
 }
 
-/*
-  Main Content
-*/
+.app-bar .app-bar__navigation ul li a:hover {
+  text-decoration: underline;
+  color: #44CE87;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/heros/hero-image.jpg');
+  background-position: center;
+  background-color: green;
+  background-size: cover;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 400px;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.hero__tagline {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25em;
+  margin-top: 1rem;
+  line-height: 1.25em;
+}
+
+.highlight {
+  border-bottom: 4px solid #44CE87;
+  font-weight:700;
+}
+
+/* Main Content */
 
 main {
   padding: 32px;
@@ -95,10 +136,34 @@ main {
   font-weight: normal;
 }
 
+/* Button explore */
 
-/*
-  Movies
-*/
+.btn {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.button__medium {
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1em 1.5em;
+}
+
+.button__explore {
+  background-color: #F9C22E;
+  color: #020C12;
+  margin-top: 2rem;
+}
+
+/* Movies */
 
 .movies {
   display: grid;
@@ -185,14 +250,13 @@ main {
   margin: 8px 0;
 }
 
-
-
 /*
   Footer
 */
 
 footer {
   padding: 16px;
+  background-color: #041825;
 }
 
 footer p {
@@ -200,15 +264,20 @@ footer p {
   color: #aaaaaa;
 }
 
-footer p a {
-  color: #db0000;
-  text-decoration: none;
+@media screen and (min-width: 540px) {
+  .hero {
+    min-height: 425px;
+  }
+
+  .hero__title {
+    font-size: 1.75em;
+  }
 }
 
 @media screen and (min-width: 650px) {
   .app-bar {
       grid-template-columns: 1fr auto;
-      padding: 8px 32px;
+      padding: 16px 32px;
   }
 
   .app-bar .app-bar__brand h1 {
@@ -230,9 +299,18 @@ footer p a {
 
   .app-bar .app-bar__navigation ul li a {
       display: inline-block;
-      width: 120px;
+      width: 145px;
+      font-size: 1.5em;
       text-align: center;
       margin: 0;
+  }
+
+  .hero {
+    min-height: 450px;
+  }
+
+  .hero__title {
+    font-size: 2em;
   }
 
   .movies {
@@ -254,19 +332,43 @@ footer p a {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .hero__inner {
+    padding: 0;
+    max-width: 600px;
+  }
+
+  .hero__title {
+    font-size: 2em;
+  }
+
+  .hero__tagline {
+    font-size: 1.5em;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .app-bar .app-bar__brand h1 {
-      font-size: 2em;
+      font-size: 2.5em;
   }
 }
 
 @media screen and (min-width: 850px) {
+  .hero__inner {
+    margin: 0 auto;
+    max-width: 751px;
+  }
+
   .movies {
       grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 2.5em;
+  }
+
   .movies {
       grid-template-columns: repeat(4, 1fr);
   }
