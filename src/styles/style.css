@@ -10,6 +10,10 @@ body {
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Skip to content */
 
 .skip-link {
@@ -269,8 +273,8 @@ main {
   line-height: 1.5em;
 }
 
-.grid-restoran__content > button {
-  margin-top: 1rem;
+.grid-restoran__content > a {
+  display: grid;
   width: 100%;
 }
 

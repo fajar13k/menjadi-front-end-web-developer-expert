@@ -18,7 +18,7 @@ const createRestaurantItemTemplate = (restaurant) => `
     </div>
     <h1>${restaurant.name}</h1>
     <p>${truncateString(restaurant.description, 250)}</p>
-    <button class="btn button__medium button__main">Cek Restoran</button>
+    <a href="${`/#/detail/${restaurant.id}`}"><button class="btn button__medium button__main">Cek Restoran</button></a>
   </div>
   </article>
 `;
