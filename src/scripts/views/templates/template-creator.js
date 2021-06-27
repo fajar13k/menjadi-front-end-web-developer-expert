@@ -3,9 +3,11 @@ import CONFIG from '../../globals/config';
 const createRestaurantDetailTemplate = (restaurant) => `
   <article class="post-item" tabindex="0">
   <div class="box">
-    <img class="post-item__thumbnail"
-      src="${restaurant.id ? CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}"
-      alt="Gambar ${restaurant.name} di ${restaurant.city}">
+    <picture class="post-item__thumbnail">
+      <source media="(min-width:1024px)" srcset="${restaurant.id ? CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId : 'https://picsum.photos/id/1060/1210/810?grayscale'}">
+      <source media="(min-width:768px)" srcset="${restaurant.id ? CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId : 'https://picsum.photos/id/1060/807/540?grayscale'}">
+      <img src="${restaurant.id ? CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId : 'https://picsum.photos/id/1060/403/270?grayscale'}" alt="Restoran ${restaurant.name} di ${restaurant.city}">
+    </picture>
     <div class="post-item__overlay">
       <h1>${restaurant.city}</h1>
     </div>
