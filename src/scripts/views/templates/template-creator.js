@@ -1,4 +1,5 @@
 import CONFIG from '../../globals/config';
+import truncateString from '../../utils/truncate-string';
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <article class="post-item" tabindex="0">
@@ -16,7 +17,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
       <p class="post-item__rating">Rating: <span class="post-item__rating__score">${restaurant.rating}/5</span>
       </p>
       <h1 class="post-item__title" tabindex="-1"><a href="#" tabindex="-1">${restaurant.name}</a></h1>
-      <p class="post-item__description">${restaurant.description}</p>
+      <p class="post-item__description">${truncateString(restaurant.description, 250)}</p>
   </div>
   </article>
 `;
