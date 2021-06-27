@@ -205,6 +205,7 @@ main {
   border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0px  rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  position: relative;
 }
 
 .grid-restoran #card__restoran > article img {
@@ -215,11 +216,27 @@ main {
   object-fit: cover;
 }
 
+.grid-restoran .grid-restoran__text__overlay {
+  position: absolute;
+  padding: 8px;
+  top: 220px;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+
+/* Grid restaurant contents */
+
 .grid-restoran__content {
   padding: 20px;
 }
 
 .grid-restoran__content > h1 {
+  font-size: 1.25em;
+  margin-bottom: 0.5rem;
+}
+
+.grid-restoran__content > h2 {
   font-size: 1.75em;
   margin-bottom: 0.5rem;
 }
