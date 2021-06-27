@@ -1,6 +1,32 @@
 import CONFIG from '../../globals/config';
 import truncateString from '../../utils/truncate-string';
 
+const createRestaurantDetailTemplate = (restaurant) => `
+  <h2 class="restaurant__detail__title">${restaurant.name}</h2>
+  <picture>
+    <source media="(min-width:1024px)" srcset="${restaurant.id ? CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId : 'https://picsum.photos/id/1060/1210/810?grayscale'}">
+    <source media="(min-width:768px)" srcset="${restaurant.id ? CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId : 'https://picsum.photos/id/1060/807/540?grayscale'}">
+    <img class="restaurant__detail__poster" src="${restaurant.id ? CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId : 'https://picsum.photos/id/1060/403/270?grayscale'}" alt="Restoran ${restaurant.name} di ${restaurant.city}">
+  </picture>
+  <div class="restaurant__detail__info">
+  <h3>Rincian Restoran</h3>
+    <h4>Alamat</h4>
+    <p>${restaurant.address}, ${restaurant.city}</p>
+    <h4>Kategori</h4>
+    <p>${restaurant.categories.map((category) => ' ' + category.name)}</p>
+    <h4>Ulasan</h4>
+    <p>⭐️ ${restaurant.rating}/5</p>
+  </div>
+  <div class="restaurant__detail__description">
+    <h3>Deskripsi</h3>
+    <p>${restaurant.description}</p>
+    <h3>Makanan yang tersedia</h3>
+    <p>${restaurant.menus.foods.map((food) => ' ' + food.name)}</p>
+    <h3>Minuman yang tersedia</h3>
+    <p>${restaurant.menus.drinks.map((drink) => ' ' + drink.name)}</p>
+  </div>
+`;
+
 const createRestaurantItemTemplate = (restaurant) => `
   <article tabindex="0">
   <picture>
@@ -18,9 +44,9 @@ const createRestaurantItemTemplate = (restaurant) => `
     </div>
     <h1>${restaurant.name}</h1>
     <p>${truncateString(restaurant.description, 250)}</p>
-    <a href="${`/#/detail/${restaurant.id}`}"><button class="btn button__medium button__main">Cek Restoran</button></a>
+    <a tabindex="-1" href="${`/#/detail/${restaurant.id}`}"><button class="btn button__medium button__main">Cek Restoran</button></a>
   </div>
   </article>
 `;
 
-export default createRestaurantItemTemplate;
+export { createRestaurantItemTemplate, createRestaurantDetailTemplate };

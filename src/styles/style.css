@@ -278,6 +278,34 @@ main {
   width: 100%;
 }
 
+/* Detail restaurant */
+
+.restaurant__detail {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.restaurant__detail .restaurant__detail__poster {
+  width: 100%;
+  max-width: 520px;
+}
+
+.restaurant__detail .restaurant__detail__info h4 {
+  margin: 20px 0;
+}
+
+.restaurant__detail .restaurant__detail__description {
+  line-height: 1.5em;
+}
+
+.restaurant__detail .restaurant__detail__description h3 {
+  padding: 10px 0;
+}
+
 /*
   Footer
 */
@@ -343,6 +371,20 @@ footer p {
 
   .hero__title {
     font-size: 2em;
+  }
+
+  .restaurant__detail {
+    grid-template-columns: auto 1fr;
+  }
+
+  .restaurant__detail .restaurant__detail__title {
+      grid-column-start: 1;
+      grid-column-end: 3;
+  }
+
+  .restaurant__detail .restaurant__detail__description {
+      grid-column-start: 1;
+      grid-column-end: 3;
   }
 }
 
