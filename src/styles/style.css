@@ -10,6 +10,23 @@ body {
   flex-direction: column;
 }
 
+/* Skip to content */
+
+.skip-link {
+  background-color: #F9C22E;
+  color: #041825;
+  font-size: 1.25rem;
+  font-weight: 700;
+  left: 0;
+  padding: 8px;
+  position: absolute;
+  top: -80px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
 
 /*
   AppBar
@@ -119,7 +136,6 @@ body {
   border-bottom: 4px solid #44CE87;
   font-weight:700;
 }
-
 
 /* Button explore */
 
