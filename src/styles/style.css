@@ -237,6 +237,7 @@ main {
   padding: 8px;
   top: 220px;
   display: inline-block;
+  font-size: 1.5em;
   background-color: black;
   color: white;
 }
@@ -247,12 +248,19 @@ main {
   padding: 20px;
 }
 
-.grid-restoran__content > h1 {
-  font-size: 1.25em;
+.grid-restoran__lokasi {
+  display: flex;
+  align-items: center;
   margin-bottom: 0.5rem;
 }
 
-.grid-restoran__content > h2 {
+.grid-restoran__content .grid-restoran__lokasi > p {
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.grid-restoran__content > h1 {
   font-size: 1.75em;
   margin-bottom: 0.5rem;
 }
