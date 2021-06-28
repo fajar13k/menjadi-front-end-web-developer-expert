@@ -12,7 +12,7 @@ const NowServing = {
         </div>
       </section>
       <div class="grid-restoran" id="list__restoran">
-          <div id="card__restoran"></div>
+        <div id="card__restoran"></div>
       </div>
     </div>
     `;
