@@ -16,7 +16,7 @@ a {
 
 /* Skip to content */
 
-.skip-link {
+#skipLink{
   background-color: #F9C22E;
   color: #041825;
   font-size: 1.25rem;
@@ -28,7 +28,7 @@ a {
   z-index: 100;
 }
 
-.skip-link:focus {
+#skipLink:focus {
   top: 0;
 }
 
@@ -42,7 +42,6 @@ a {
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 10px;
-  position: sticky;
   top: 0;
   z-index: 99;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
