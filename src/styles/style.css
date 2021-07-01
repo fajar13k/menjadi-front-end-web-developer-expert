@@ -76,7 +76,7 @@ a {
 .app-bar .app-bar__navigation {
   position: absolute;
   top: 65px;
-  left: -180px;
+  left: -190px;
   width: 170px;
   transition: all 0.3s;
   padding: 8px;
