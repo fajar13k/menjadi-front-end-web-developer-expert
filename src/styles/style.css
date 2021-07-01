@@ -54,7 +54,7 @@ a {
 
 .app-bar .app-bar__menu button {
   border: none;
-  font-size: 18px;
+  font-size: 32px;
   background-color: transparent;
   color: white;
   padding: 8px;
@@ -69,15 +69,15 @@ a {
 .app-bar .app-bar__brand h1 {
   color: #44CE87;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 36px;
   user-select: none;
 }
 
 .app-bar .app-bar__navigation {
   position: absolute;
-  top: 50px;
+  top: 65px;
   left: -180px;
-  width: 150px;
+  width: 170px;
   transition: all 0.3s;
   padding: 8px;
   overflow: hidden;
@@ -90,9 +90,10 @@ a {
 .app-bar .app-bar__navigation ul li a {
   display: inline-block;
   text-decoration: none;
+  font-size: 24px;
   background-color: #041825;
   color: white;
-  padding: 8px;
+  padding: 12px;
   width: 100%;
 }
 
