@@ -1,0 +1,485 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Skip to content */
+
+#skipLink{
+  background-color: #F9C22E;
+  color: #041825;
+  font-size: 1.25rem;
+  font-weight: 700;
+  left: 0;
+  padding: 8px;
+  position: absolute;
+  top: -80px;
+  z-index: 100;
+}
+
+#skipLink:focus {
+  top: 0;
+}
+
+/*
+  AppBar
+*/
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: #041825;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  border: none;
+  font-size: 32px;
+  background-color: transparent;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: #44CE87;
+  text-transform: uppercase;
+  font-size: 36px;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 65px;
+  left: -190px;
+  width: 170px;
+  transition: all 0.3s;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 24px;
+  background-color: #041825;
+  color: white;
+  padding: 12px;
+  width: 100%;
+}
+
+.app-bar .app-bar__navigation ul li a:hover {
+  text-decoration: underline;
+  color: #44CE87;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/heros/hero-image.jpg');
+  background-position: center;
+  background-color: green;
+  background-size: cover;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 400px;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.hero__tagline {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25em;
+  margin-top: 1rem;
+  line-height: 1.25em;
+}
+
+.highlight {
+  border-bottom: 4px solid #44CE87;
+  font-weight:700;
+}
+
+/* Button explore */
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.button__medium {
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1em 1.5em;
+}
+
+.button__main {
+  background-color: #F9C22E;
+  color: #020C12;
+  margin-top: 2rem;
+}
+
+/* Main Content */
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+}
+
+/* Cerita kami */
+
+.whats__up {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.whats__up__tagline {
+  color: #EF2D56;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+.whats__up__headline {
+  font-size: 2em;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Rules untuk card, supaya tidak loop ke bawah */
+
+#card__restoran {
+  display: contents;
+}
+
+/* Posts */
+
+.grid-restoran {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+.grid-restoran #card__restoran > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+}
+
+.grid-restoran #card__restoran > article img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.grid-restoran .grid-restoran__text__overlay {
+  position: absolute;
+  padding: 8px;
+  top: 220px;
+  display: inline-block;
+  font-size: 1.5em;
+  background-color: black;
+  color: white;
+}
+
+/* Grid restaurant contents */
+
+.grid-restoran__content {
+  padding: 20px;
+}
+
+.grid-restoran__lokasi {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.grid-restoran__content .grid-restoran__lokasi > p {
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.grid-restoran__content > h1 {
+  font-size: 1.75em;
+  margin-bottom: 0.5rem;
+}
+
+.grid-restoran__content > p {
+  line-height: 1.5em;
+}
+
+.grid-restoran__content > a {
+  display: grid;
+  width: 100%;
+}
+
+/* Detail restaurant */
+
+.restaurant__detail {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.restaurant__detail .restaurant__detail__poster {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 10px;
+}
+
+.restaurant__detail .restaurant__detail__info h4 {
+  margin: 20px 0;
+}
+
+.restaurant__detail .restaurant__detail__description {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.4);
+  border-width: 1px 0px;
+  line-height: 1.5em;
+  padding: 15px 0;
+}
+
+.restaurant__detail .restaurant__detail__description h3 {
+  padding-bottom: 10px;
+}
+
+.restaurant__detail .restaurant__detail__description h4 {
+  padding: 10px 0;
+}
+
+.restaurant__detail__review h4 {
+  padding: 10px 0;
+}
+
+.restaurant__detail__review p {
+  padding: 20px;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+}
+
+/* Like button */
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #F9C22E;
+  color: #041825;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+  Footer
+*/
+
+footer {
+  padding: 16px;
+  background-color: #041825;
+}
+
+footer p {
+  text-align: center;
+  color: #aaaaaa;
+}
+
+@media screen and (min-width: 540px) {
+  .hero {
+    min-height: 425px;
+  }
+
+  .hero__title {
+    font-size: 1.75em;
+  }
+
+  .whats__up__tagline {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .app-bar {
+      grid-template-columns: 1fr auto;
+      padding: 16px 32px;
+  }
+
+  .app-bar .app-bar__brand h1 {
+      font-size: 1.5em;
+  }
+
+  .app-bar .app-bar__menu {
+      display: none;
+  }
+
+  .app-bar .app-bar__navigation {
+      position: static;
+      width: 100%;
+  }
+
+  .app-bar .app-bar__navigation ul li {
+      display: inline-block;
+  }
+
+  .app-bar .app-bar__navigation ul li a {
+      display: inline-block;
+      width: 145px;
+      font-size: 1.5em;
+      text-align: center;
+      margin: 0;
+  }
+
+  .hero {
+    min-height: 450px;
+  }
+
+  .hero__title {
+    font-size: 2em;
+  }
+
+  .restaurant__detail {
+    grid-template-columns: auto 1fr;
+  }
+
+  .restaurant__detail .restaurant__detail__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .restaurant__detail .restaurant__detail__description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__inner {
+    padding: 0;
+    max-width: 600px;
+  }
+
+  .hero__title {
+    font-size: 2em;
+  }
+
+  .hero__tagline {
+    font-size: 1.5em;
+  }
+
+  .whats__up__tagline {
+    font-size: 2em;
+  }
+
+  .whats__up__headline {
+    font-size: 2.25em;
+  }
+
+  .grid-restoran {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .app-bar .app-bar__brand h1 {
+      font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .hero__inner {
+    margin: 0 auto;
+    max-width: 751px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 2.5em;
+  }
+
+  .grid-restoran {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .hero__title {
+    font-size: 2.5em;
+  }
+
+  .grid-restoran {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
