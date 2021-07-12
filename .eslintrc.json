@@ -1,14 +1,15 @@
 {
     "env": {
         "browser": true,
-        "es2021": true,
-        "node": true
+        "es2020": true,
+        "node": true,
+        "jasmine": true
     },
     "extends": [
         "airbnb-base"
     ],
     "parserOptions": {
-        "ecmaVersion": 12,
+        "ecmaVersion": 11,
         "sourceType": "module"
     },
     "rules": {
@@ -16,7 +17,7 @@
         "no-console": 0,
         "no-underscore-dangle": 0,
         "no-restricted-globals": 0,
-        "linebreak-style": 0,
-        "prefer-template": 0
-    }
+        "linebreak-style": 0
+    },
+    "plugins": ["jasmine"]
 }
