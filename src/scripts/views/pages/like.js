@@ -21,6 +21,12 @@ const Like = {
   async afterRender() {
     const resto = await FavoriteRestaurantIdb.getAllRestaurants();
     const restoContainer = document.querySelector('#card__restoran');
+
+    // Cek apakah ada restoran yang dapat dirender
+    if (resto.length === 0) {
+      restoContainer.innerHTML = 'Belum ada restoran yang kamu suka nih!';
+    }
+
     resto.forEach((restaurant) => {
       restoContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
