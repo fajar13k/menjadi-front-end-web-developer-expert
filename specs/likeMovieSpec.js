@@ -50,7 +50,7 @@ describe('Liking A Restaurant', () => {
     FavoriteRestaurantIdb.deleteRestaurant(1);
   });
 
-  it('Should not add a restaurant again when its already liked', async () => {
+  it('Should not add a movie again when its already liked', async () => {
     await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {
@@ -58,20 +58,20 @@ describe('Liking A Restaurant', () => {
       },
     });
 
-    // Tambahkan restoran dengan ID 1 ke daftar restoran yang disukai
+    // Tambahkan film dengan ID 1 ke daftar film yang disukai
     await FavoriteRestaurantIdb.putRestaurant({ id: 1 });
-
-    // Simulasikan pengguna menekan tombol suka restoran
+    // Simulasikan pengguna menekan tombol suka film
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-
-    // Tidak ada restoran yang ganda
+    // tidak ada film yang ganda
     expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([{ id: 1 }]);
+
+    FavoriteRestaurantIdb.deleteRestaurant(1);
   });
 
-  xit('Should not add a restaurant when it has no id', async () => {
+  it('Should not add a restoran when it has no id', async () => {
     await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      movie: {},
+      restaurant: {},
     });
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
