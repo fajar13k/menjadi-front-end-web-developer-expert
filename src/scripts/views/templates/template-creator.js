@@ -18,7 +18,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
       <h4>Alamat</h4>
       <p>${restaurant.address}, ${restaurant.city}</p>
       <h4>Kategori</h4>
-      <p>${restaurant.categories.map((category) => ' ' + category.name)}</p>
+      <p>${restaurant.categories.map((category) => ` ${category.name}`)}</p>
       <h4>Rating</h4>
       <p>⭐️ ${restaurant.rating}/5</p>
   </div>
@@ -27,9 +27,9 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <p>${restaurant.description}</p>
     <h3>Menu</h3>
       <h4>Makanan</h4>
-      <p>${restaurant.menus.foods.map((food) => ' ' + food.name)}</p>
+      <p>${restaurant.menus.foods.map((food) => ` ${food.name}`)}</p>
       <h4>Minuman</h4>
-      <p>${restaurant.menus.drinks.map((drink) => ' ' + drink.name)}</p>
+      <p>${restaurant.menus.drinks.map((drink) => ` ${drink.name}`)}</p>
   </div>
 `;
 
@@ -55,14 +55,14 @@ const createRestaurantItemTemplate = (restaurant) => `
   </article>
 `;
 
-const createLikeButtonTemplate = () => `
-  <button aria-label="like this spot" id="likeButton" class="like">
+const createLikeRestaurantButtonTemplate = () => `
+  <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="far fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
-const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this spot" id="likeButton" class="like">
+const createUnlikeRestaurantButtonTemplate = () => `
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
@@ -71,6 +71,6 @@ export {
   createRestaurantDetailReviewTemplate,
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createLikeRestaurantButtonTemplate,
+  createUnlikeRestaurantButtonTemplate,
 };
