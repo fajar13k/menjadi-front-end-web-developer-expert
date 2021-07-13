@@ -15,11 +15,7 @@ exports.config = {
   mocha: {},
   name: 'restopedia',
   plugins: {
-    pauseOnFail: {},
     retryFailedStep: {
-      enabled: true,
-    },
-    tryTo: {
       enabled: true,
     },
     screenshotOnFail: {
