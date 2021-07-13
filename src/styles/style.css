@@ -110,7 +110,7 @@ a {
   min-height: 400px;
   width: 100%;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/heros/hero-image.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/heros/hero-image-small.jpg');
   background-position: center;
   background-color: green;
   background-size: cover;
@@ -425,6 +425,10 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/heros/hero-image-medium.jpg');
+  }
+
   .hero__inner {
     padding: 0;
     max-width: 600px;
@@ -465,6 +469,10 @@ footer p {
 }
 
 @media screen and (min-width: 1200px) {
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/heros/hero-image-large.jpg');
+  }
+
   .hero__title {
     font-size: 2.5em;
   }
