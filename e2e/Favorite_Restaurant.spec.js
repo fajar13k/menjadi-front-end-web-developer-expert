@@ -7,6 +7,6 @@ Before((I) => {
 const kondisiAwal = 'Belum ada restoran yang kamu suka nih!';
 
 Scenario('Showing empty favorite restaurant', (I) => {
-  I.seeElement('#card__restoran');
+  I.seeElementInDOM('#card__restoran');
   I.see(kondisiAwal, '#card__restoran');
 });
