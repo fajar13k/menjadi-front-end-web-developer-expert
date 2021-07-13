@@ -34,7 +34,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 `;
 
 const createRestaurantItemTemplate = (restaurant) => `
-  <article tabindex="0">
+  <article class="article__restaurant" tabindex="0">
     <picture>
       <source media="(min-width:1024px)" data-srcset="${restaurant.id ? CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId : 'https://picsum.photos/id/1060/1210/810?grayscale'}">
       <source media="(min-width:768px)" data-srcset="${restaurant.id ? CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId : 'https://picsum.photos/id/1060/807/540?grayscale'}">
@@ -48,9 +48,9 @@ const createRestaurantItemTemplate = (restaurant) => `
         <i class="fa fa-map-marker-alt"></i>
         <p>${restaurant.city}</p>
       </div>
-      <h1>${restaurant.name}</h1>
+      <h1 class="grid-restoran__title">${restaurant.name}</h1>
       <p>${truncateString(restaurant.description, 250)}</p>
-      <a tabindex="-1" href="${`/#/detail/${restaurant.id}`}"><button class="btn button__medium button__main">Cek Restoran</button></a>
+      <a tabindex="-1" href="${`/#/detail/${restaurant.id}`}"><button class="btn button__medium button__main button__restoran">Cek Restoran</button></a>
     </div>
   </article>
 `;
