@@ -427,6 +427,9 @@ footer p {
 @media screen and (min-width: 768px) {
   .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/heros/hero-image-medium.jpg');
+    background-position: center;
+    background-color: green;
+    background-size: cover;
   }
 
   .hero__inner {
@@ -471,6 +474,9 @@ footer p {
 @media screen and (min-width: 1200px) {
   .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/heros/hero-image-large.jpg');
+    background-position: center;
+    background-color: green;
+    background-size: cover;
   }
 
   .hero__title {
