@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js && node sharp.js",
+    "bundle-report": "webpack-bundle-analyzer --port 4200 dist/stats.json",
     "build-image": "node sharp.js",
     "test": "karma start",
     "e2e": "codeceptjs run --steps"
@@ -17,6 +18,7 @@
     "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "codeceptjs": "^2.6.11",
     "copy-webpack-plugin": "^6.0.2",
     "css-loader": "^3.6.0",
