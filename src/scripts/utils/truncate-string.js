@@ -7,7 +7,7 @@ const truncateString = (string, number) => {
 
   // Return string yang telah dipotong dengan "..."
   // Lalu concatenate ke belakang string awal
-  return string.slice(0, number) + ' ...';
+  return `${string.slice(0, number)} ...`;
 };
 
 export default truncateString;

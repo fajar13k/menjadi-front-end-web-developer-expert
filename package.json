@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --config webpack.dev.js",
     "bundle-report": "webpack-bundle-analyzer --port 4200 dist/stats.json",
     "build-image": "node sharp.js",
-    "build": "webpack --config webpack.prod.js && build-image",
+    "build": "webpack --config webpack.prod.js && node sharp.js",
     "test": "karma start",
     "e2e": "codeceptjs run --steps"
   },
