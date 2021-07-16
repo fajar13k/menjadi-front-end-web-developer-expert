@@ -6,6 +6,36 @@ const createRestaurantDetailReviewTemplate = (review) => `
   <p>${review.review}</p>
 `;
 
+const createSkeletonItemTemplate = (count) => {
+  let template = '';
+
+  for (let i = 0; i < count; i += 1) {
+    template += `
+    <article class="article__restaurant" tabindex="0">
+      <picture>
+        <source media="(min-width:1024px)" srcset="./placeholder-large.jpg">
+        <source media="(min-width:768px)" srcset="./placeholder-medium.jpg">
+        <img alt="image skeleton" src="./placeholder-small.jpg">
+      </picture>
+      <div class="grid-restoran__text__overlay">
+        <p>⭐️ 5/5</p>
+      </div>
+      <div class="grid-restoran__content">
+        <div class="grid-restoran__lokasi">
+          <i class="fa fa-map-marker-alt"></i>
+          <p>Kota Niflheim</p>
+        </div>
+        <h1 class="grid-restoran__title">Nama Restoran</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatibus, necessitatibus laborum, accusantium dolore placeat quo fugiat deleniti esse nulla culpa porro ea quia harum!</p>
+        <a tabindex="-1" href="#"><button class="btn button__medium button__skeleton button__restoran"></button></a>
+      </div>
+    </article>
+  `;
+  }
+
+  return template;
+};
+
 const createRestaurantItemTemplate = (restaurant) => `
   <article class="article__restaurant" tabindex="0">
     <picture>
@@ -69,6 +99,7 @@ const createUnlikeRestaurantButtonTemplate = () => `
 
 export {
   createRestaurantDetailReviewTemplate,
+  createSkeletonItemTemplate,
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
   createLikeRestaurantButtonTemplate,

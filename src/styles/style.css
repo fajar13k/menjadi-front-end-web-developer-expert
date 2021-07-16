@@ -168,6 +168,12 @@ a {
   margin-top: 2rem;
 }
 
+.button_skeleton {
+  background-color: #efefef;
+  color: #efefef;
+  margin-top: 2rem;
+}
+
 /* Main Content */
 
 main {
